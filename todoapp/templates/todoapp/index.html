@@ -17,7 +17,7 @@
         <li class="list-group-item">
           <div class="d-flex justify-content-between">
       <span>{{todo.text}}</span>
-          <button class="btn btn-danger btn-sm"> X </button>
+          <a class="btn btn-danger btn-sm" href="{% url 'delete' todo.id %}"> X </a>
         </div>
       </li>
       {% endfor %}

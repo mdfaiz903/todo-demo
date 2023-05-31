@@ -12,5 +12,9 @@ def index(request):
         'todos':todos
     }
     return render(request,'todoapp/index.html',context)
+def deletetodo(request,id):
+    Todo.objects.get(id=id).delete()
+    return redirect('/')
+
 def about(request):
     return render(request,'todoapp/about.html')
